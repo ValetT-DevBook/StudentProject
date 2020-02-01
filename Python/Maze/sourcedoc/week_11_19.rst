@@ -1,0 +1,66 @@
+--------------------------
+ Board Book - Week 11/19
+--------------------------
+
+Work done
+---------
+
+class :class:`Maze` and methods (end)
+=====================================
+
+* Implémentation de la méthode random afin de généré des labyrinthes parfaits : random()
+* Implémentation de la méthode resolve pour trouver le chemin menant d'un point A a un point B:
+	* Ajout d'une méthode permettant de connaitre la salle d'arrivée du labyrinthe : get_goal()
+	* Ajout d'une méthode permettant de connaitre la liste des rooms sur le chemin de résolution : get_solution()
+	* Ajout d'une méthode permettant de montrer la résolution : show_solution()
+	* Ajout d'une méthode permettant de cacher la résolution : hide_solution()
+	* Ajout d'un modificateur permettant de changer le point d'arrivé du labyrinthe : set_goal()
+
+Classe Maze terminée.
+
+Voir la documentation du module Maze
+
+.. toctree::
+   :maxdepth: 1
+
+   maze
+
+
+Study the Python doc
+====================
+
+Etude de la documentation sur le module :mod:`argparse` dèjà implémenté de base dans python3.
+
+Dans le but de pouvoir lancer le main_maze.py et le graphical_maze_main.py avec des lignes de commandes depuis un terminal.
+
+Source: `module argparse`_.
+
+.. _module argparse: https://docs.python.org/3/library/argparse.html
+
+Work in progress
+----------------
+
+Début de programmation de main_maze.py permettant de lancer les labyrinthes directement depuis un terminal de commande en utilisant notre module maze.py :
+
+Pour l'utiliser nous saisirons dans le terminal : python3 main_maze.py [ARGS]
+
+(Reflexion) Où [ARGS] seront des arguments parmi:
+	* -h or --help : Pour afficher l'aide
+
+	* -r [X] [Y] or --random [X] [Y] : pour afficher un labyrinthe parfait de largueur X et d'hauteur Y.
+	* -f [Nom de fichier] or --from [Nom de fichier] : pour créer un labyrinthe depuis un fichier de type labyrinthe (largeur et hauteur sur les 2 premières ligne, le reste du texte le modèle de labyrinthe)
+	* -e [X] [Y] or --edit [X] [Y] : Pour créer un maze editable de largueur X et d'hauteur Y.
+
+	* Et pour les 3 derniers un argument supplémentaires comme :
+		* -s [Nom de fichier] or --save [Nom de fichier] : pour sauvegarder sur un fichier
+		* -r [X] [Y] [X_goal] [Y_goal] or --resolve [X] [Y] [X_goal] [Y_goal] : pour avoir la résolution avec la salle de coordonnées [X] [Y] comme départ et celle de coordonnées [X_goal] [Y_goal] comme arrivé.
+
+Future Work
+-----------
+
+* Finaliser le main_maze.py
+
+* Création d'un graphical_main_maze.py (`optionnel`) pour permettre une interface plus claire pour l'utilisateur et avoir un applicatif du module en mode graphique étant lancé depuis un terminal de commande.
+
+
+:doc:`back <index>` 

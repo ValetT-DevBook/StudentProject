@@ -1,0 +1,52 @@
+--------------------------
+ Board Book - Week 12/02
+--------------------------
+
+Work done
+---------
+
+Creation of graphical_main_maze (all)
+=====================================
+
+Ajout d'un mode pacman dans graphical_main_maze.py, le pacman apparait quelque secondes apres l'affichage du labyrinthe pour effectuer une animation, puis la résolution se fait de la même manière que pour un labyrinthe normal mais avec un thème pacman.
+
+Pour plus d'informations, voir la documentation:
+
+.. toctree::
+   :maxdepth: 1
+
+   graphical_main_maze
+
+.. note:: Help for graphical_maze_main.py
+   
+   NAME
+	graphical_main_maze.py
+
+   DESCRIPTION
+	This script launch a graphical pattern of you maze.
+	command are preceded by - , and in some times followed by specific args precise by [ARG].
+
+   ARGUMENTS (AJOUTÉ)
+	
+	-pm, --pac-man
+		Pass the maze in the pac-man's mode
+
+
+Pour le pacman les arguments de modifcation de style du labyrinthe ne sont pas autorisé, ainsi les arguments tels que -cw , -cr , -cg, -cp ne sont pas autorisé.
+
+* Résolution d'un bug où la dernière colonne d'un labyrinthe avait tous les murs du bas fermé dans tous les cas de génération aléatoire effectués.
+
+Work in progress
+----------------
+
+* Création du README.txt
+
+* Finaliser le diaporama.
+
+Future Work
+-----------
+
+Présentation du projet.
+
+
+:doc:`back <index>`

@@ -1,0 +1,167 @@
+--------------------------
+ Board Book - Week 11/26
+--------------------------
+
+Work done
+---------
+
+Creation of library print (all)
+===============================
+
+Création d'un fichier library.py afin de pouvoir afficher les différents labyrinthes disponibles dans l'archive de labyrinthes fourni sous la forme d'un tableau.
+
+Pour plus d'informations, voir la documentation:
+
+.. toctree::
+   :maxdepth: 1
+
+   library
+
+Completion and finalize of main_maze (all)
+==========================================
+
+Le main_maze.py a été complété et une aide a été crée :
+
+Pour plus d'informations, voir la documentation:
+
+.. toctree::
+   :maxdepth: 1
+
+   main_maze
+
+.. note:: Help for maze_main.py
+   
+   NAME
+	   main_maze.py
+
+   DESCRIPTION
+	   This script launch a pattern of you maze inside your terminal.
+
+   ARGUMENTS
+	   -h, --help
+		   Display the manual of script with the differents arguments
+
+	   -l, --library
+		   Show the library of mazes already exist
+	
+	   -r, --random
+		[X : int][Y :int]
+		   Create a random maze with X-by-Y dimension.(By default if X and Y are omises, X=Y=5)
+
+	   -f, --from
+		 [FILE :str]
+		   Create a maze from a maze .txt files. (You can see the files with --l, --library)
+
+	   -e, --edit 
+		[X :int][Y :int]
+		   Create an editable maze with X-by-Y dimension. (By default if X and Y are omises, X=Y=5)
+
+	   -rs, --resolve
+		[X :int][Y :int][X_goal :int][Y_goal :int]
+		   Display on your maze the resolution beginning in the coordinates (X, Y) to the coordinates (X_goal,Y_goal).
+		   (By default if X and Y are omises, (X,Y)=(0,0))
+	           (By default if X_GOAL and Y_GOAL are omises, (X_GOAL, Y_GOAL)=(width-1, height-1))
+
+	   -s, --save 
+		[FILE :str]
+		   Save your maze in a maze .txt file with FILE for name. (You can find your saves in ../maze_library/saves)
+		
+   IMPORTANT:
+	   -rs or --resolve must be given before -s or --save
+
+
+Creation of graphical_main_maze (all)
+=====================================
+
+Création de graphical_main_maze.py permettant l'applicatif du labyrinthe sous la forme d'une interface graphique à partir d'un terminal.
+
+Un clic droit dans le labyrinthe affiché le résoud, un clic gauche sur une salle modifie la salle d'arrivé. 
+
+Pour plus d'informations, voir la documentation:
+
+.. toctree::
+   :maxdepth: 1
+
+   graphical_main_maze
+
+.. note:: Help for graphical_maze_main.py
+   
+   NAME
+	graphical_main_maze.py
+
+   DESCRIPTION
+	This script launch a graphical pattern of you maze.
+	command are preceded by - , and in some times followed by specific args precise by [ARG].
+
+   ARGUMENTS
+	-h, --help
+		Display a quick help.
+
+	-m, --manual
+		Display this manual of script with the differents arguments.
+
+	-l, --library
+		Show the library of mazes already exist.
+
+	-r, --random 
+		[X :int][Y :int]
+			Create a random maze with X-by-Y dimension.(By default if X and Y are omises, X=Y=5)
+
+	-f, --from
+		[FILE :str]
+			Create a maze from a maze .txt files.(You can see files with --l, --library)
+
+	-s, --save 
+		[FILE :str]
+			Save your maze in a maze .txt file with FILE for name. (You can find your saves in ../maze_library/saves)
+
+	-cw, --change_wall 
+		[COLOR_WALL :str]
+			Change the color of walls. (By default, walls are black)
+
+	-cr, --change_room
+		[COLOR_ROOM :str]
+			Change the color of rooms. (By default, rooms are white)
+
+	-cg, --change_goal
+		[COLOR_GOAL :str]
+			Change the color of the goal. (By default, the goal is blue)
+
+	-cp, --change_path
+		[COLOR_PATH :str]
+			Change the color of the path. (By default, the path is red)
+
+	-sr, --size_room 
+		[SIZE_ROOM :int]
+			Change the size of each rooms. (By default, a room's size is 20 pixels)
+
+	-sp, --speed_path 
+		[SPEED_PATH :int]
+			Change the speed of the path in milliseconds. (By defaut, the path go to 50ms per room)
+
+Pour les arguments de modification de couleurs :
+
+   .. _fig:tkinter_colors:
+   .. figure:: ../images/TkInterColorCharts.png
+      :align: center
+      :width: 55%
+      :alt: Couleurs autorisées dans Tkinter
+
+      IMAGE 1 :  `Couleurs autorisées dans Tkinter`
+
+Work in progress
+----------------
+
+* Relecture de la documentation afin de verifier s'il n'y a éventuellement pas d'erreurs dans les doctests.
+
+* Phase de test et de débogage afin de rendre un travail sans bogues.
+
+Future Work
+-----------
+
+Consertation et préparation de la présentation du projet :
+    * Reflexion sur la manière dont nous présenterons le projet.
+
+    * Création d'un diaporama afin de présenter notre projet lors de la présentation finale.
+
+:doc:`back <index>`

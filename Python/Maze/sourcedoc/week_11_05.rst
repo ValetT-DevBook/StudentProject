@@ -1,0 +1,156 @@
+--------------------------
+ Board Book - Week 11/05
+--------------------------
+
+Work done
+---------
+
+class :class:`Stack` and methods (all)
+======================================
+
+Ajout dans le projet du module stack.py vu en cours en vue de réaliser la future méthode permettant la résolution d'un Maze.
+
+.. toctree::
+   :maxdepth: 1
+
+   stack
+
+class :class:`Room` and methods (all)
+=====================================
+Création du fichier room.py contenant une classe d'objets caractérisant une pièce d'un labyrinthe.
+
+Cela permettra de construire le labyrinthe grace à une liste composée de plusieurs listes elles-mêmes composées de Room() car un labyrinthe est un ensemble de salle reliée ou non.
+
+Pour plus de détail, voir la classe Room :
+
+.. toctree::
+   :maxdepth: 1
+
+   room
+
+
+class :class:`Maze` and methods (start)
+=======================================
+
+Création du fichier maze.py avec quelques méthodes de base:
+	* get_height (permettant d'obtenir la hauteur du labyrinthe)
+	* get_width (permettant d'obtenir la largeur du labyrinthe)
+	* get_state (permettant d'obtenir l'état du labyrinthe, servira lors de la résolution notamment)
+	
+.. toctree::
+   :maxdepth: 1
+
+   maze
+
+
+Reflexion about creation and resolve of a maze
+==============================================
+
+.. topic:: Creation d'un Maze parfait
+
+   Suite à diverses recherches sur les façons de créer des labyrinthes parfaits, nous avons donc décidé de procéder de la façon suivante:
+
+   .. note::
+      Les propos qui suivent seront exposées schématiquement à l'image 1 plus bas.
+
+   
+   En référence à la classe Room, une salle possède un tag qui peut être modifié par la suite.
+
+   Nous allons donc créer un labyrinthe de longueur et largeur souhaitée, où toutes les rooms le composant ont les portes fermées et un tag différent les uns des autres. (`figure 1`)
+
+   Le but est de prendre un mur aléatoire, le supprimer et associer le même tag aux 2 pièces se rejoignant, le tag choisi est celui de la room ayant le plus petit entier comme tag. (`figure 2`).
+   
+   On repète cette étape un certain nombre de fois en respectant une condition primordiale sur la suppression d'un mur :
+		* Si les deux rooms possèdent le même tag alors on ne le supprime pas.
+
+   `En effet, si deux rooms possèdent le même tag cela signifie que ces deux rooms sont connectés entre eux par un chemin unique.`
+
+   Par contre, si des rooms ont déja un tag en commun et fusionnent avec d'autres rooms ayant un tag en commun, alors elles prennent aussi le tag le plus petit. (`figure 6`)
+
+   C'est à partir de ce principe qu'on va créer un labyrinthe. 
+
+   Une fois que toutes les rooms du labyrinthes possèdent le tag 0, cela signifie que toutes les pièces sont connectées et qu'il y a strictement qu'un chemin unique pour arriver d'un point A à un point B. (`figure 8`)
+
+   .. _fig:random_maze:
+   .. figure:: ../images/random_maze.png
+      :align: center
+      :width: 35%
+      :alt: Schéma de création d'un maze parfait
+
+      IMAGE 1 :  `Schéma de création d'un maze parfait`
+
+   .. _fig:rd_maze:
+   .. figure:: ../images/random_fast.gif
+      :align: center
+      :width: 10%
+      :alt: Schéma de création d'un maze parfait
+
+      IMAGE 2 :  `Animation de création d'un maze parfait`
+
+
+.. topic:: Résolution d'un Maze
+
+   Suite à diverses recherches sur les façons de résoudre des labyrinthes, nous avons donc décidé de procéder de la façon suivante:
+
+   .. note::
+      Les propos qui suivent seront exposées schématiquement à l'image 2 plus bas.
+
+   Le but est de partir d'une pile principale, qu'on appelera ici `main_stack`. (`figure 1`)
+
+   Cette pile principale contiendra plusieurs piles.
+
+   En effet, à l'initialisation, une pile, appelons la second_stack, sera dans la pile main_stack.
+
+   A chaque passage dans une nouvelle room, la coordonnée de la room, sous forme de tuples (x,y), sera ajouté à second_room au sein de la main_stack. (`figure 2`)
+
+   Lorsque nous sommes dans une room possédant plusieurs sortie possible (ici représenté par un carré rouge)(`Intersection`), on passe à une deuxième second_stack qu'on ajoute à main_stack. (`figure 3`) 
+
+   Et on continue le chemin en ajoutant les coordonnées dans la second_stack du haut. (`figure 4`)
+
+   Si on tombe sur une room "cul de sac", sans sortie, alors on supprime la dernière second_stack pour revenir à la dernière intersection croisée. (`figure 5`)
+
+   Et on réitère l'opération jusqu'à arriver à la coordonnée représentant la sortie du labyrinthe, c'est-à-dire en bas à droite (par défaut et dans cet exemple).
+
+   Au final la main_stack est alors composée de plusieurs second_stack, eux-mêmes composés de coordonnées. En dépilant chaque éléments, on obtient donc la suite de coordonnées à prendre pour obtenir le chemin de sortie d'une salle a une autre. (`figure 8`)
+
+   .. _fig:resolve_maze:
+   .. figure:: ../images/resolve_maze.png
+      :align: center
+      :width: 35%
+      :alt: Schéma de création d'un maze parfait
+
+      IMAGE 1 :  `Schéma de résolution d'un maze`
+
+
+   .. _fig:res_maze:
+   .. figure:: ../images/resolution_slow.gif
+      :align: center
+      :width: 20%
+      :alt: Schéma de résolution d'un maze
+
+      IMAGE 2 :  `Animation de résolution d'un maze`
+
+
+Work in progress
+----------------
+
+* Pour le module Maze :
+	* Création de diverses methodes cachées ou non pour la classe maze tel que:
+		* Une méthode permettant d'afficher le labyrinthe en utilisant : __repr__()
+		* Une méthode permettant de changer l'état d'une salle du labyrinthe : change_room()
+		* Une méthode pour obtenir une salle précise du labyrinthe : get_room(x,y) 
+		* Une méthode permettant de modifier l'état des portes de plusieurs salles du labyrinthe :  __change_door
+
+	* Création d'une nouvelle class MazeError, détectant notamment si la porte d'une Room située 		sur les bords du labyrinthe s'ouvre et permettant une gestion des erreurs au sein du module 		Maze.py.
+
+Future Work
+-----------
+
+* Avancer et terminer la classe Maze :
+	* Création d'une méthode permettant de connaitre les voisins d'une room, positionnée en (x,y) afin de savoir si l'on peut ouvrir ou non des portes entre ces salles : probablement nommé __way_possible(x,y)
+	* Réalisation de la fonction ou des fonctions permettant de faire un labyrinthe "fait main".
+	* Réalisation de la fonction permettant de crée un labyrinthe a partir d'un fichier.
+
+* Débuter la création d'un fichier python probablement nommé main_maze.py afin de permettre a un 	utilisateur d'utiliser les outils proposé par le module Maze.py en ligne de commande.
+
+:doc:`back <index>`

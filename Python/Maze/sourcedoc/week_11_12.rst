@@ -1,0 +1,124 @@
+--------------------------
+ Board Book - Week 11/12
+--------------------------
+
+Work done
+---------
+
+class :class:`Room` and methods (add)
+=====================================
+
+Ajout d'une nouvelle méthode au module Room: 
+	* Room.close_all_door(): fermant tous les portes d'une Room.
+
+class :class:`Maze` and methods (continue)
+==========================================
+
+* Utilisation de la méthode __repr__ pour la représentation d'un labyrinthe.
+
+::
+
+   >>> m = Maze()
+   >>> m
+   +-+-+-+-+-+
+   | | | | | |
+   +-+-+-+-+-+
+   | | | | | |
+   +-+-+-+-+-+
+   | | | | | |
+   +-+-+-+-+-+
+   | | | | | |
+   +-+-+-+-+-+
+   | | | | | |
+   +-+-+-+-+-+
+
+* Création de la méthodee change_room()
+
+::
+
+   >>> m=Maze(3,3)
+   >>> m
+   +-+-+-+
+   | | | |
+   +-+-+-+
+   | | | |
+   +-+-+-+
+   | | | |
+   +-+-+-+
+   >>> m.change_room(1,1,'- ')
+   >>> m
+   +-+-+-+
+   | | | |
+   +-+-+-+
+   | |   |
+   +-+-+-+
+   | | | |
+   +-+-+-+
+
+* Création de la méthode get_room(x,y) qui renvoie la Room de coordonnées (x,y).
+
+* La méthode __change_door() énoncé la semaine précédente a été changées en change_row(row,str) ouvrant les portes de la rangée `line` selon le str mis en second paramètre.
+
+::
+
+   >>> m = Maze()
+   >>> m.change_row(1,' |-  |-| ')
+   >>> m
+   +-+-+-+-+-+
+   | | | | | |
+   +-+-+-+-+-+
+   | |   | | |
+   + +-+ +-+ +
+   | | | | | |
+   +-+-+-+-+-+
+   | | | | | |
+   +-+-+-+-+-+
+   | | | | | |
+   +-+-+-+-+-+
+
+* Création d'un modificateur permettant de changer le statut du labyrinthe vers divers états : set_state()
+	* Les état sont :
+		* ``not_ready``
+		* ``ready``
+		* ``solved``	    
+		* ``impossible``
+	* Voir plus bas la classe MazeState.
+
+* Création d'une méthode changeant le statut du labyinthe (pour ready si des conditions sont remplies) apres la fin de l'édition : end_edit()
+
+exception :class:`MazeError`
+============================
+
+Création de MazeError pour les exceptions du Maze.
+
+class :class:`MazeState` (add)
+==============================
+
+Création d'une classe MazeState au sein du module maze.py gérant divers états du labyrinthe afin de savoir si un labyrinthe peut-être prêt à être résolu ou non et s'il est résolvable ou impossible.
+
+Pour plus d'information, voir la documentation du module Maze
+
+.. toctree::
+   :maxdepth: 1
+
+   maze
+
+Work in progress
+----------------
+
+* Création d'une méthode permettant de crée un labyrinthe a partir d'un fichier (dépendant de divers fonctions cachées) : create_from_file(file)
+
+* Création d'une méthode permettant de sauvegardé un labyrinthe crée : write_in_file(file)
+
+Future Work
+-----------
+
+* Finir la classe Maze chacun de notre côté pour voir la logique de programmation de chacun et mettre en commun les fonctions pour prendre le code le plus optimal.
+
+Le gain de temps n'est pas forcément le plus intéressant ici, le but recherché avant tout est que chacun s'occupe de tout pour que cela fasse travailler chacun d'entre nous et nous permettre de voir chaque notion des cours d'AP2 vu durant ce semestre.
+
+* Pour finir la classe maze nous allons donc y implementer les fonctions et méthode de résolution et de création aléatoire d'un labyrinthe parfait.
+
+* Création de gif pour expliquer plus facilement nos propositions d'algorithme.
+
+* Débuter la création d'un fichier python probablement nommé main_maze.py afin de permettre a un utilisateur d'utiliser les outils proposé par le module Maze.py en ligne de commande.

@@ -7,7 +7,7 @@ Java is the second langage I've been learning since the second year.
 
 During the second year, I discovered :
 - The langage Java and this syntax
-- This spefication
+- This specification
 - The OOP (Oriented Object Programming)
 - The importance of unit tests
 
