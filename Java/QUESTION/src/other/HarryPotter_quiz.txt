@@ -1,0 +1,56 @@
+De quelle forme est la cicatrice d'Harry Potter ?
+Eclair
+TextualAnswer
+1
+Citez le prénom de l'un des membres du trio de la saga Harry Potter :
+Harry ; Hermione ; Ron
+MultipleAnswer
+1
+Est-ce que Neville Londubat fait partie de la même maison qu'Harry Potter ?
+Oui
+YesNoAnswer
+1
+Quelle est la maison de Drago Malefoy ?
+Serpentard | Griffondor | Serdaigle | Poufsouffle
+UniqueMultipleAnswer
+1
+Mme Chourave est-elle le professeur d'Histoire de la magie ?
+Non
+YesNoAnswer
+2
+En quelle année de cours, Harry rencontre-t-il enfin son parrain ?
+3
+NumericAnswer
+2
+De quoi Severus Rogue est-il le professeur ?
+Potions
+TextualAnswer
+2
+Citez une personne participant au tournoi des Trois Sorciers :
+Harry Potter ; Victor Krum ; Fleur Delacour ; Cédric Diggory
+MultipleAnswer
+2
+Combien de frères et soeurs Ronald Weasley a-t-il ?
+6
+NumericAnswer
+3
+Quel est le nom de l'attrapeur de l'équipe de Quidditch de Bulgarie ?
+Krum
+TextualAnswer
+3
+Qui tue Albus Dumbledore, directeur de l'école de magie Poudlard ?
+Rogue | Malefoy | Voldemort | Harry
+UniqueMultipleAnswer
+3
+Est-ce que Rusard est un Cracmol ?
+Oui
+YesNoAnswer
+3
+Quelle est l'incantation du sortilège de Désarmement ?
+Experliamus | Avada Kedavra | Flipendo | Expecto Patronum
+UniqueMultipleAnswer
+3
+Comment s'appelle les examens finaux dans le monde des sorciers ?
+ASPIC
+TextualAnswer
+5

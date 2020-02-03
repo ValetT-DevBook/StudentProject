@@ -1,0 +1,16 @@
+ceci est un exemple d'application utilisant un DP observer, le chargement dynamique et l'introspection
+
+ Un voyage inattendu
+
+Bilbo Sacquet, Hobbit aventureux, reçut un jour la visite de
+Gandalf le magicien, accompagné de Thorin Oakenshield (chef très
+important parmi les nains) et de sa troupe constituée de 13 joyeux
+nains.
+
+Bilbo, séduit par l'idée de découvrir le monde, accepta la
+mission que lui proposait Thorin : récupérer le trésor des
+aïeux du nain , perdu lors de la terrible attaque de Smaug le
+dragon. Ainsi, un beau matin, les 14 nains, Bilbo et Gandalf partirent
+en direction de l'Ancien Royaume sous la Montagne des nains
+d'Erebor. Mais ce royaume se trouvait loin , et de grands dangers
+jalonnaient la route pour s'y rendre…

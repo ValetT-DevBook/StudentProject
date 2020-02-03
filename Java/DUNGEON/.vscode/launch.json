@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - AdventureGame",
+            "request": "launch",
+            "mainClass": "dungeon.AdventureGame",
+            "projectName": "COO-DUNGEON"
+        }
+    ]
+}
