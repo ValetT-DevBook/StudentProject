@@ -1,0 +1,35 @@
+﻿Référence	Couleur 	Indice rgb		Indice hexa
+
+(.sgriddler)		
+	
+#0 		White		rgb(255,255,255)	#FFFFFF
+	
+#1  		Lightgray	rgb(192,192,192)	#C0C0C0	
+	
+#2  		Gray		rgb(128,128,128)	#808080	
+	
+#3  		Darkgray	rgb(63,63,63)		#3f3f3f
+	
+#4  		Black		rgb(0,0,0)		#000000	
+	
+#5  		Lightblue	rgb(173,216,230)	#ADD8E6	
+	
+#6  		Blue		rgb(0,0,255)		#0000FF	
+	
+#7  		Brown		rgb(139,69,19)		#8B4513		
+	
+#8  		Red		rgb(255,0,0)		#FF0000	
+	
+#9  		Orange		rgb(255,165,0)		#FFA500	
+	
+#A  		Yellow		rgb(255,255,0)		#FFFF00	
+	
+#B  		Purple		rgb(128,0,128)		#800080	
+	
+#C  		Pink		rgb(255,192,203)	#FFC0CB	
+	
+#D  		Lightgreen	rgb(0.255.0)		#00FF00	
+	
+#E  		Green		rgb(0,128,0)		#008000	
+	
+#F  		Beige		rgb(244,164,96)		#F4A460	

@@ -1,0 +1,51 @@
+﻿1)PAR INTERPRÉTEUR PYTHON :
+- Ouvrez le fichier projet.py dans un interpréteur python (comme IDLE ou Thonny).
+- Puis lancez l'éxécution du code sur la fenêtre du fichier projet.py, enfin suivez les instructions dans le shell de l'interpréteur.
+
+2)UTILISATION DU TERMINAL DE VOTRE ORDINATEUR (Conseillé pour un affichage plus agréable):
+- Il faut passer par le terminal de votre ordinateur.
+Pour cela :
+- Si vous êtes sur un système Linux, Ubuntu... : 
+	|Placez votre curseur de souris dans le dossier contenant ce fichier, faîtes un clic droit dans le dossier et cliquez sur 'ouvrir dans un terminal'. 
+	|Une fois dans le terminal tapez : python3 projet.py 
+- Si vous êtes sur un système Mac OS :
+	|Lancez le terminal.
+	|Tapez la commande cd suivi du chemin du dossier contenant le fichier projet.py (par exemple : cd /User/Votre_nom.../dossier_du_projet..).
+	|Une fois dans le terminal tapez : python3 projet.py 
+- Si vous êtes sur un système Windows : 
+	|Placez vous dans le dossier contenant ce fichier, cliquez sur la barre d'adresse du dossier et tapez cmd, vous serez ainsi dans le terminal et dans le dossier voulu.
+	|Une fois dans le terminal tapez : py projet.py 
+
+(Disponible en jeu)
+---------- REGLES DU JEU ----------
+Selon Wikipedia : (https://fr.wikipedia.org/wiki/Picross)
+Un nonogram est un jeu de réflexion solitaire qui consiste à découvrir un dessin sur une grille en noircissant des cases d’après des indices logiques laissés sur le bord de la grille.
+Les nombres situés à gauche et au dessus de la grille, décrivent les groupes de cases noires consécutives, respectivement horizontaux et verticaux.
+L’ordre de ces nombres détermine l’ordre d’apparition de ces groupes, mais on ne sait pas où commencent et où finissent les groupes.
+A un nombre n correspond un groupe de n cases noires ou colorées, et deux groupes sont séparés par au moins une case blanche.
+Lors de la résolution, il est possible de marquer les cases blanches avec une croix pour signifier que cette case ne peut être une case noire ou coloré.
+Une fois toutes les cases correctement remplies, le jeu est fini.
+
+---------- CHOIX DU MODE DE JEU ET DU NONOGRAM ----------
+Vous pouvez choisir de jouer sur une version utilisable avec le clavier ou avec la souris.
+Il suffit de choisir celle que vous voulez.
+-Soit en tapant 1 pour le mode clavier.
+-Soit en tapant 2 pour le mode souris.
+
+Vous avez choisi la version clavier :
+Choisissez le niveau de difficulté.
+Pour sélectionner un niveau, il faut rentrer le numéro associé à la difficulté.
+Ces derniers sont classés des plus faciles aux plus difficiles.
+Une fois ce dernier choisi, c'est au tour du choix du nonogramme, rentrez le numéro correspondant à ce dernier pour lancer le jeu.
+Lors du jeu saisissez 'o' ou 'O' pour un case qui doit être noirci où 'x' ou 'X' pour indiquer une case qui ne doit pas être noirci.
+
+Vous avez choisi la version souris:
+Alors vous avez 2 choix:
+- Noir et blanc (1).
+- Couleur (2).
+
+Le choix noir et blanc vous permet de faire les mêmes choix de nonogrammes que ceux du mode clavier.
+Donc le déroulement du choix du nonogramme reste même.
+Une fois le numéro rentré, le jeu est lancé.
+Mais le choix couleur, vous dirige directement sur le choix des nonogrammes coloré éxistant, il n'y a pas niveaux de difficultés.
+Pour choisir un nonogramme il suffit encore une fois de saisir son numéro,et le déroulement reste le même.

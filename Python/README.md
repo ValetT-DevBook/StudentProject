@@ -26,18 +26,25 @@ There are two projects (order by date of conception) :
 
 ### Windows
 
+Download the last version of Python [here](https://www.python.org/downloads/) and install it.
+
+Click on Windows button, search `run`, press Enter, and search cmd to open the shell.
+
+Enter the command: `py <theFile>`
+
+
 ### Linux
 
 You need to install python3.5 or more, sphinx and tkinter for the graphical interface.
 
-To install Python::
-    sudo apt-get install python3
+To install Python:
+    `sudo apt-get install python3`
 
-To install Sphinx::
-    sudo apt-get install python3-sphinx
+To install Sphinx:
+    `sudo apt-get install python3-sphinx`
 
-To install Tkinter::
-    sudo apt-get install python3-tk
+To install Tkinter:
+    `sudo apt-get install python3-tk`
 
 
 There is a Makefile in the root of project 'Maze'.

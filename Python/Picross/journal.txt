@@ -1,0 +1,63 @@
+﻿#Alexandre Bonvoisin
+#Valentin Phu
+#Tristan Valet
+
+Projet : Nonogramme
+
+Semaine du rendu 1er rendu : 
+Travail effectué :
+- Fonction détermination_valeurs, qui permet de créer une chaine de caractère contenant les numéros des coordonnées séparés par des ','.
+- Fonction creation_dico, qui permet de créer un dictionnaire des coordonnées en fonction d’un fichier.
+
+- Fonction marge, qui permet de déterminer la marge entre les colonnes et les lignes.
+- Fonction liste_valeur, qui permet d'obtenir une liste de liste de valeurs en fonction des lignes ou des colonnes.
+- Fonction grille, qui permet de créer une grille dans un fichier texte en fonction des valeurs d'un dico fourni.
+#La fonction grille produit déja un résultat, mais elle est en construction.#
+
+Travail prévu:
+-Finir la fonction grille.
+-Créer le mécanisme qui permet de jouer au clavier le tour de jeu et de détecter la fin du jeu.
+-Création d'une illustration de notre raisonnement pour la réalisation de la grille.
+
+###############################################################################################################################################################################
+
+Semaine précédent le rendu 2:
+Travail effectué :
+- Fin de construction de la Fonction grille, elle permet de créer entièrement une grille dans un fichier texte en fonction des valeurs d'un dico fourni.
+- Création du mécanisme qui permet de jouer au clavier le tour de jeu en saisissant les coordonnées d'une case sur la grille, grâce à la fonction edit_grille.
+- L'optimisation du jeu sera fait pour être joué sur le terminal Ubuntu.
+
+Travail prévu:
+- Implémenter un système d'exception pour que le joueur ne saisisse pas des coordonnées correspondant à une case qui n'existent pas.
+- Rajouter le mécanisme qui détecte la fin du jeu.
+- Ajouter un repère à la grille pour que les coordonnées soient plus facilement visible lors de la partie.
+
+###############################################################################################################################################################################
+
+Semaine précédent le rendu 3:
+Travail effectué :
+- Implémenter un système d'exception pour que le joueur ne saisisse pas des coordonnées correspondant à une case qui n'existent pas.
+- Ajout du mécanisme qui détecte la fin du jeu, un message est affiché lorsque l'on gagne.
+- Ajout d'un repère à la grille pour que les coordonnées soient plus facilement visible lors de la partie sur le terminal.
+- Réorganisation de l'ensemble du projet afin que les instructions récurrentes soient dans des sous fonctions, que l'on a mis dans le fichier sous_fonctions.py.
+	Ce fichier est ensuite importé dans le fichier projet.py qui est le fichier principal, pour l'utilisation des sous instructions.
+- Les Doctests et Docstrings des fonctions on été completés, testés et des commentaires on été ajoutés aux fonctions.
+- (facultatif) Le joueur peut parcourir les dossier contenu dans l'archive gs14.zip de Juraj Simlovic pour selectionner un nonogramme.
+
+Travail prévu:
+- Faire l'interface graphique de notre Nonogramme, le joueur aura le choix de jouer au clavier sur le terminal ou a la souris sur le module tkinter.
+- Rédiger le manuel d'utilisation.
+
+(Facultatif):
+- Avoir la possibilité de faire des Nonogrammes colorés
+
+###############################################################################################################################################################################
+
+Semaine précédent le rendu 4:
+Travail effectué :
+- Ajout de l'interface graphique de notre Nonogramme, le joueur à le choix de jouer au clavier sur le terminal ou à la souris dans le fichier tknonogram.py.
+- Rédaction du manuel d'utilisation qui est manuel-utilisation.txt.
+- Il est possible de faire des Nonogrammes colorés (Nous avons crée 3 nonogramme coloré et founir une référence des couleurs pour en créer).
+- Suppression des croix en cas de victoire pour mieux voir le dessin et fermeture automatique de la fenêtre.
+Toutes les fonctions peuvent être retrouvées dans le fichier projet.py et dans le dossier ressource : sous_fonction.py et tk_nonogram.py.
+La grille peut être vu dans le fichier test.txt.
